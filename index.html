@@ -212,7 +212,15 @@ justify-content: center;
   </div>
 
 <div class="card">
-<img src="file_0000000088d072088b10a4eea311b599.png">
+<img src="file_0000000088d072088b10a4eea311b599.png"><label>Quantity:</label>
+<select id="saltedQty">
+  <option value="1">1 Pack</option>
+  <option value="2">2 Pack</option>
+  <option value="3">3 Pack</option>
+</select>
+<br><br>
+
+<button onclick="orderSalted()">Order on WhatsApp</button>
 <h3>Salted Makhana</h3>
 <p>₹110 (100g)</p>
 <a href="https://wa.me/919507074122?text=Hello%20I%20want%20to%20order%20Salted%20Makhana%20100g%20(₹110)" target="_blank">
@@ -285,10 +293,24 @@ alert("Order submitted! We will contact you soon.");
   <p>⭐⭐⭐⭐⭐ “Best makhana brand in town.”</p>
 </section><footer>
   <p>© 2026 Mithila Crunch | All Rights Reserved</p>
-</footer>
+</footer><script>
+function orderSalted() {
+  var qty = document.getElementById("saltedQty").value;
+  var price = 110;
+  var total = qty * price;
+
+  var message = "Hello,%20I%20want%20to%20order:%0A"
+              + "Product:%20Salted%20Makhana%0A"
+              + "Quantity:%20" + qty + "%20Pack%0A"
+              + "Total:%20₹" + total;
+
+  window.open("https://wa.me/919507074122?text=" + message, "_blank");
+}
+</script>
 </body>
 
 </html>
+
 
 
 
