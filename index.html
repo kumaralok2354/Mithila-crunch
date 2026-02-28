@@ -212,7 +212,21 @@ justify-content: center;
   </div>
 
 <div class="card">
-<img src="file_0000000088d072088b10a4eea311b599.png"><label>Quantity:</label>
+<img src="file_0000000088d072088b10a4eea311b599.png"><label>Name:</label><br>
+<input type="text" id="custName" placeholder="Enter your name"><br><br>
+
+<label>Address:</label><br>
+<textarea id="custAddress" placeholder="Enter full address"></textarea><br><br>
+
+<label>Quantity:</label>
+<select id="saltedQty">
+  <option value="1">1 Pack</option>
+  <option value="2">2 Pack</option>
+  <option value="3">3 Pack</option>
+</select>
+<br><br>
+
+<button onclick="orderSalted()">Order on WhatsApp</button><label>Quantity:</label>
 <select id="saltedQty">
   <option value="1">1 Pack</option>
   <option value="2">2 Pack</option>
@@ -306,10 +320,35 @@ function orderSalted() {
 
   window.open("https://wa.me/919507074122?text=" + message, "_blank");
 }
-</script>
+</script><script>
+function orderSalted() {
+
+  var name = document.getElementById("custName").value;
+  var address = document.getElementById("custAddress").value;
+  var qty = document.getElementById("saltedQty").value;
+
+  var price = 110;
+  var total = qty * price;
+
+  if(name === "" || address === "") {
+    alert("Please fill your name and address");
+    return;
+  }
+
+  var message = "New Order%0A%0A"
+              + "Name: " + name + "%0A"
+              + "Address: " + address + "%0A"
+              + "Product: Salted Makhana%0A"
+              + "Quantity: " + qty + " Pack%0A"
+              + "Total: ₹" + total;
+
+  window.open("https://wa.me/919507074122?text=" + message, "_blank");
+}
+     </script>
 </body>
 
 </html>
+
 
 
 
