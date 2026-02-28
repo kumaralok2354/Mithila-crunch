@@ -116,7 +116,29 @@ padding:15px;
 border-radius:50%;
 font-size:20px;
 text-decoration:none;
+} <style>
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 1000;
+  transition: 0.3s;
 }
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+</style>
 </style>
 </head>
 
@@ -151,7 +173,7 @@ text-decoration:none;
 </div>
 
 <div class="card">
-<img src="file_00000000b1e8720899153a49e4dbd2bc.png">
+<img src="file_00000000723c7208bafd221b77f8da8a.png">
 <h3>Peri Peri</h3>
 <p>₹120 (100g)</p>
 <a href="https://wa.me/919507074122?text=Hello%20I%20want%20to%20order%20Peri%20Peri%20Makhana%20100g%20(₹120)" target="_blank">
@@ -160,7 +182,7 @@ text-decoration:none;
 </div>
 
 <div class="card">
-<img src="file_000000008bf07208875a86e288a372a8.png">
+<img src="file_00000000b1e8720899153a49e4dbd2bc.png">
 <h3>Pudina</h3>
 <p>₹115 (100g)</p>
 <a href="https://wa.me/919507074122?text=Hello%20I%20want%20to%20order%20Pudina%20Makhana%20100g%20(₹115)" target="_blank">
@@ -204,10 +226,16 @@ function submitOrder(){
 alert("Order submitted! We will contact you soon.");
 }
 </script>
-
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919507074122?text=Hello%20I%20want%20to%20order%20Mithila%20Crunch%20Makhana" 
+   class="whatsapp-float" 
+   target="_blank">
+   💬
+</a>
 </body>
 
 </html>
+
 
 
 
