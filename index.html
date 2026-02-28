@@ -6,6 +6,36 @@
 <title>Mithila Crunch | Premium Makhana</title>
 
 <style>
+  footer {
+  background: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+  }
+  
+  
+  .card {
+  position: relative;
+}
+
+.badge {
+  background: gold;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+  .card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -136,7 +166,17 @@ justify-content: center;
   z-index: 1000;
   transition: 0.3s;
 }
+@keyframes whatsapp-bounce {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  50%  { transform: scale(1); }
+  75%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 
+.whatsapp-float {
+  animation: whatsapp-bounce 2s infinite;
+}
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
@@ -164,6 +204,12 @@ justify-content: center;
 </section>
 
 <section class="products" id="products">
+  <div class="card">
+  <span class="badge">Best Seller</span>
+  <img src="salted.png" width="200">
+  <h3>Salted Makhana</h3>
+  <p>₹110 (100g)</p>
+  </div>
 
 <div class="card">
 <img src="file_0000000088d072088b10a4eea311b599.png">
@@ -233,10 +279,17 @@ alert("Order submitted! We will contact you soon.");
    class="whatsapp-float" 
    target="_blank">
    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="35">
-</a>
+</a><section>
+  <h2>Customer Reviews ⭐</h2>
+  <p>⭐⭐⭐⭐⭐ “Bahut crispy aur tasty!”</p>
+  <p>⭐⭐⭐⭐⭐ “Best makhana brand in town.”</p>
+</section><footer>
+  <p>© 2026 Mithila Crunch | All Rights Reserved</p>
+</footer>
 </body>
 
 </html>
+
 
 
 
